@@ -1,0 +1,11 @@
+Hello Blog
+{% for blog in blogs %}
+<h2>Iryna has written {{blogs.count}} blogs {{blogs.count | pluralize}}</h2>
+
+<a href="{%% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
+<h5>{{ blog.date | date:'M d Y'}}</h5>
+<p>{{ blog.description }}</p>
+
+
+
+{% endfor %}
